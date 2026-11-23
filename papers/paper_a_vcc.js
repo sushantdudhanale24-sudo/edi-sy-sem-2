@@ -131,7 +131,7 @@ const body = [
     `M. T. Ribeiro, S. Singh, and C. Guestrin, "‘Why should I trust you?’: Explaining the predictions of any classifier," in *Proc. ACM SIGKDD*, 2016, pp. 1135–1144.`,
     `J. Li, S. Ji, T. Du, B. Li, and T. Wang, "TextBugger: Generating adversarial text against real-world applications," in *Proc. NDSS*, 2019.`,
     `Unicode Consortium, "Unicode Security Mechanisms," Unicode Technical Standard #39.`,
-    `${get("_github:url") || TBD("TBD: GitHub URL of phishsentry-research")}`,
+    `PhishSentry research code and result files. [Online]. Available: ${get("_github:url") || TBD("TBD: GitHub URL of phishsentry-research")}`,
   ]),
 ];
 

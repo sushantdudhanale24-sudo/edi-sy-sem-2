@@ -1,4 +1,4 @@
-Highlighted [TBD] items in the paper: 73
+Highlighted [TBD] items in the paper: 72
 
 Result files not found yet:
   results/e3_web.json
@@ -15,4 +15,3 @@ Text to write or run:
   - TBD: run E3/E4
   - TBD: run E5 (needs OPENAI_API_KEY) and interpret Table IV, consistency, injection and cost here
   - TBD: conclusion with headline numbers once E3-E5 are run
-  - TBD: GitHub URL of phishsentry-research

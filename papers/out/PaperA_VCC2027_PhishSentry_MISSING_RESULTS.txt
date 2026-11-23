@@ -1,6 +1,4 @@
-Highlighted [TBD] items in the paper: 1
+Highlighted [TBD] items in the paper: 0
 
 All numeric result lookups found.
 
-Text to write or run:
-  - TBD: GitHub URL of phishsentry-research

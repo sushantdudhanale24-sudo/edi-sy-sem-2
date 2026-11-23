@@ -20,7 +20,7 @@ The papers never contain hand-typed numbers. Every value is read from `results/*
 | E3/E4/E6 website | Needs `collect_web.py` run daily for 1–2 weeks | `results/e3_web.json`, `results/e4_aggregation.json` |
 | E5 LLM override | Needs E3 data + `OPENAI_API_KEY` | `results/e5_llm_override.json` |
 
-**Paper A is complete except reference [18] (GitHub URL).** After pushing the repository, run:
+**Paper A is complete.** The repository is https://github.com/sushantdudhanale24-sudo/edi-sy-sem-2. If it ever moves, update the URL and rebuild:
 
 ```bash
 echo '{"url": "https://github.com/<you>/phishsentry-research"}' > results/_github.json

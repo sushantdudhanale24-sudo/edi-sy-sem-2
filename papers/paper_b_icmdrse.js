@@ -113,7 +113,7 @@ const body = [
     `T. Koide, H. Nakano, and D. Chiba, "ChatPhishDetector: Detecting phishing sites using large language models," *IEEE Access*, vol. 12, pp. 154381–154400, 2024, doi: 10.1109/ACCESS.2024.3483905.`,
     `N. Korade, S. Dudhanale, S. Deogaonkar, A. Deokar, and S. Dodikindiwad, "Explainable learned fusion for robust SMS phishing detection: A statistically validated study of smishing filters," under review, 2026.`,
     `K. Greshake *et al.*, "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection," in *Proc. ACM AISec*, 2023.`,
-    `${TBD("TBD: GitHub URL of phishsentry-research")}`,
+    `PhishSentry research code and result files. [Online]. Available: ${get("_github:url") || TBD("TBD: GitHub URL of phishsentry-research")}`,
     `F. Heiding, B. Schneier, A. Vishwanath, J. Bernstein, and P. S. Park, "Devising and detecting phishing emails using large language models," *IEEE Access*, vol. 12, pp. 42131–42146, 2024.`,
     `M. T. Ribeiro, S. Singh, and C. Guestrin, "‘Why should I trust you?’: Explaining the predictions of any classifier," in *Proc. ACM SIGKDD*, 2016, pp. 1135–1144.`,
     `S. M. Lundberg and S.-I. Lee, "A unified approach to interpreting model predictions," in *Proc. NeurIPS*, 2017, pp. 4765–4774.`,
