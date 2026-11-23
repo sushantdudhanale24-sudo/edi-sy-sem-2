@@ -1,0 +1,9 @@
+data/web/
+data/email/
+data/sms_raw/
+results/llm_cache/
+papers/out/*.pdf
+papers/out/*.jpg
+node_modules/
+__pycache__/
+.pytest_cache/

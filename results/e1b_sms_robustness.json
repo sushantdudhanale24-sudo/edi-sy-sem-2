@@ -1,0 +1,183 @@
+{
+  "task": "malicious (smishing+spam) vs rest",
+  "n": 5831,
+  "splits": 10,
+  "recall": {
+    "clean": {
+      "naive_bayes": {
+        "mean": 92.97663316582914,
+        "std": 2.3164668350777635
+      },
+      "stacked": {
+        "mean": 94.28165829145728,
+        "std": 1.7447473722128404
+      },
+      "naive_bayes+norm": {
+        "mean": 93.12814070351759,
+        "std": 2.0111849812140323
+      },
+      "stacked+norm": {
+        "mean": 93.98090452261307,
+        "std": 1.7552610604605015
+      }
+    },
+    "leetspeak": {
+      "naive_bayes": {
+        "mean": 92.07412060301507,
+        "std": 2.777192916860869
+      },
+      "stacked": {
+        "mean": 93.27788944723619,
+        "std": 2.052277302217917
+      },
+      "naive_bayes+norm": {
+        "mean": 93.12839195979899,
+        "std": 2.1544180644748208
+      },
+      "stacked+norm": {
+        "mean": 93.98115577889449,
+        "std": 1.7254463288411102
+      }
+    },
+    "homoglyph": {
+      "naive_bayes": {
+        "mean": 92.32412060301507,
+        "std": 2.6331931603169396
+      },
+      "stacked": {
+        "mean": 93.22864321608041,
+        "std": 1.8433411563027968
+      },
+      "naive_bayes+norm": {
+        "mean": 93.12814070351759,
+        "std": 2.0111849812140323
+      },
+      "stacked+norm": {
+        "mean": 93.98090452261307,
+        "std": 1.7552610604605015
+      }
+    },
+    "split_letters": {
+      "naive_bayes": {
+        "mean": 92.07386934673366,
+        "std": 2.4799196590037447
+      },
+      "stacked": {
+        "mean": 93.07763819095477,
+        "std": 1.8523721565872855
+      },
+      "naive_bayes+norm": {
+        "mean": 92.92788944723618,
+        "std": 2.1918783638353303
+      },
+      "stacked+norm": {
+        "mean": 93.93040201005024,
+        "std": 1.8052794592281156
+      }
+    },
+    "defanged_links": {
+      "naive_bayes": {
+        "mean": 92.82587939698492,
+        "std": 2.434675713447431
+      },
+      "stacked": {
+        "mean": 93.78015075376884,
+        "std": 1.8690431921115223
+      },
+      "naive_bayes+norm": {
+        "mean": 93.12814070351759,
+        "std": 2.0111849812140323
+      },
+      "stacked+norm": {
+        "mean": 93.98090452261307,
+        "std": 1.7552610604605015
+      }
+    },
+    "combined": {
+      "naive_bayes": {
+        "mean": 91.52236180904524,
+        "std": 2.8647492517755535
+      },
+      "stacked": {
+        "mean": 92.07562814070351,
+        "std": 1.7520540096400112
+      },
+      "naive_bayes+norm": {
+        "mean": 92.87713567839197,
+        "std": 2.107218127211944
+      },
+      "stacked+norm": {
+        "mean": 93.73015075376884,
+        "std": 1.7586443583172031
+      }
+    }
+  },
+  "clean_fpr": {
+    "naive_bayes": {
+      "mean": 0.7655102866649108,
+      "std": 0.5877650633844262
+    },
+    "stacked": {
+      "mean": 0.5379061835606056,
+      "std": 0.3027752506983204
+    },
+    "naive_bayes+norm": {
+      "mean": 0.7965340715666689,
+      "std": 0.5727305931160455
+    },
+    "stacked+norm": {
+      "mean": 0.5792819353360696,
+      "std": 0.3375529411977259
+    }
+  },
+  "detector_ablation_delta_f1_pts": {
+    "urgency": {
+      "mean": 0.024549290372074543,
+      "std": 0.07364787111622362
+    },
+    "credential": {
+      "mean": 0.029620132023896465,
+      "std": 0.23502505857339318
+    },
+    "financial": {
+      "mean": -0.3409135613078973,
+      "std": 0.7900383459332132
+    },
+    "url": {
+      "mean": -0.21857995408840594,
+      "std": 0.31046016463986587
+    },
+    "sentiment": {
+      "mean": 0.050673260790753405,
+      "std": 0.09608912699925969
+    },
+    "pattern": {
+      "mean": -0.6147166733218845,
+      "std": 0.5623459031344035
+    }
+  },
+  "stacker_coefficients": {
+    "heuristic": 1.0946655255160587,
+    "naive_bayes": 6.716702503158858,
+    "det_urgency": 0.11575375063867994,
+    "det_credential": 0.05105259634866592,
+    "det_financial": 2.2723517127763984,
+    "det_url": 1.3824461468896634,
+    "det_sentiment": 0.093646802959389,
+    "det_pattern": 2.918884314951725
+  },
+  "example_attacks": {
+    "leetspeak": "URGENT: ver1fy your 4ccount now at http://sbi-kyc.com or it will be blocked",
+    "homoglyph": "URGENT: verify your \u0430c\u0441ount now at http://sbi-kyc.com or it will be blocked",
+    "split_letters": "URGENT: v.e.r.i.f.y your account now at http://sbi-kyc.com or it will be blocked",
+    "defanged_links": "URGENT: verify your account now at hxxp://sbi-kyc[.]com or it will be blocked",
+    "combined": "URGENT: ver1fy your 4ccount now at hxxp://sbi-kyc[.]com or it will be bl\u043e\u0441k\u0435d"
+  },
+  "_generated_at": "2026-11-23 18:51:49",
+  "_machine": {
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+    "logical_cpus": 2,
+    "python": "3.13.18",
+    "os": "Linux"
+  }
+}

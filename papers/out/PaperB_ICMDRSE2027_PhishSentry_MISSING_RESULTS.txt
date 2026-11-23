@@ -1,0 +1,18 @@
+Highlighted [TBD] items in the paper: 73
+
+Result files not found yet:
+  results/e3_web.json
+  results/e5_llm_override.json
+
+Text to write or run:
+  - TBD: tuned values
+  - TBD: N days, start–end dates
+  - TBD: model snapshot
+  - TBD: number of runs
+  - TBD: interpret Table II after running E3 - say which method wins and by how much; if a baseline wins, say so
+  - TBD: interpret Table III after running E3
+  - TBD: sensitivity figure appears here after E3/E4
+  - TBD: run E3/E4
+  - TBD: run E5 (needs OPENAI_API_KEY) and interpret Table IV, consistency, injection and cost here
+  - TBD: conclusion with headline numbers once E3-E5 are run
+  - TBD: GitHub URL of phishsentry-research

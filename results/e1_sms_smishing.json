@@ -1,0 +1,602 @@
+{
+  "dataset": "sms_mishra_soni_5971.csv",
+  "n_raw": 5971,
+  "n": 5831,
+  "n_positive": 543,
+  "n_negative": 5288,
+  "positive_labels": [
+    "smishing"
+  ],
+  "label_counts": {
+    "ham": 4834,
+    "smishing": 543,
+    "spam": 454
+  },
+  "folds": 5,
+  "repeats": 5,
+  "significance": {
+    "stacked_vs_heuristic": {
+      "mean_diff_pts": 16.641598551434196,
+      "t": 13.545561990359667,
+      "p": 9.786074970516504e-13
+    },
+    "stacked_vs_naive_bayes": {
+      "mean_diff_pts": 0.022510703711031255,
+      "t": 0.02216492989294681,
+      "p": 0.9824996478286177
+    },
+    "stacked_vs_ensemble": {
+      "mean_diff_pts": 0.19200511131751785,
+      "t": 0.1827417381605523,
+      "p": 0.8565355819159973
+    },
+    "ensemble_vs_naive_bayes": {
+      "mean_diff_pts": -0.1694944076064866,
+      "t": -0.28751245048973545,
+      "p": 0.776187960819624
+    },
+    "override_effect": {
+      "mean_diff_pts": -0.06294037822879384,
+      "t": -0.7932243267062804,
+      "p": 0.4354194882877032
+    }
+  },
+  "layers": [
+    "heuristic",
+    "naive_bayes"
+  ],
+  "theta": 0.6,
+  "transformer": null,
+  "summary": {
+    "heuristic": {
+      "precision": {
+        "mean": 57.17059154243073,
+        "std": 3.129797418186715
+      },
+      "recall": {
+        "mean": 89.95480801902819,
+        "std": 8.43274019436033
+      },
+      "f1": {
+        "mean": 69.56894213378406,
+        "std": 2.6920258532360495
+      },
+      "accuracy": {
+        "mean": 92.70448188535204,
+        "std": 0.6437963073156141
+      },
+      "fpr": {
+        "mean": 7.011952005980475,
+        "std": 1.2244098958578986
+      },
+      "auc": {
+        "mean": 93.707781469791,
+        "std": 1.172983273999784
+      }
+    },
+    "naive_bayes": {
+      "precision": {
+        "mean": 85.1679230116545,
+        "std": 5.048483966923749
+      },
+      "recall": {
+        "mean": 87.5453618756371,
+        "std": 3.4551376457407166
+      },
+      "f1": {
+        "mean": 86.18802998150723,
+        "std": 2.4674086228688843
+      },
+      "accuracy": {
+        "mean": 97.37609592554541,
+        "std": 0.5396677945738585
+      },
+      "fpr": {
+        "mean": 1.615042752162646,
+        "std": 0.67624279097745
+      },
+      "auc": {
+        "mean": 98.96782899702399,
+        "std": 0.435105164040939
+      }
+    },
+    "ensemble": {
+      "precision": {
+        "mean": 84.73903008198523,
+        "std": 5.150463769765058
+      },
+      "recall": {
+        "mean": 87.69758749575263,
+        "std": 3.8391279729010077
+      },
+      "f1": {
+        "mean": 86.01853557390075,
+        "std": 2.6075344844681707
+      },
+      "accuracy": {
+        "mean": 97.33495012206755,
+        "std": 0.5640865674892449
+      },
+      "fpr": {
+        "mean": 1.6755878981244845,
+        "std": 0.70205826858506
+      },
+      "auc": {
+        "mean": 99.0241400737335,
+        "std": 0.42032703482936645
+      }
+    },
+    "ensemble_no_override": {
+      "precision": {
+        "mean": 84.86281762577181,
+        "std": 5.178703069985061
+      },
+      "recall": {
+        "mean": 87.69758749575263,
+        "std": 3.8391279729010077
+      },
+      "f1": {
+        "mean": 86.08147595212954,
+        "std": 2.619290962064689
+      },
+      "accuracy": {
+        "mean": 97.34866930938135,
+        "std": 0.5666930249148239
+      },
+      "fpr": {
+        "mean": 1.6604578711014697,
+        "std": 0.7048872878811153
+      },
+      "auc": {
+        "mean": 99.0261603275617,
+        "std": 0.41892153548349403
+      }
+    },
+    "stacked": {
+      "precision": {
+        "mean": 84.05412253153702,
+        "std": 3.0469870231333256
+      },
+      "recall": {
+        "mean": 88.61671763506627,
+        "std": 3.0481418132884737
+      },
+      "f1": {
+        "mean": 86.21054068521826,
+        "std": 1.944774105089342
+      },
+      "accuracy": {
+        "mean": 97.35893444803567,
+        "std": 0.3881641215873802
+      },
+      "fpr": {
+        "mean": 1.743608636634338,
+        "std": 0.41017376757675517
+      },
+      "auc": {
+        "mean": 98.9912797209646,
+        "std": 0.35470976048416064
+      }
+    }
+  },
+  "thresholds_per_fold": {
+    "heuristic": [
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.16,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.16,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.11
+    ],
+    "naive_bayes": [
+      0.34,
+      0.74,
+      0.59,
+      0.62,
+      0.27,
+      0.33,
+      0.44,
+      0.56,
+      0.51,
+      0.66,
+      0.4,
+      0.61,
+      0.8,
+      0.71,
+      0.53,
+      0.81,
+      0.8,
+      0.65,
+      0.66,
+      0.31,
+      0.25,
+      0.67,
+      0.64,
+      0.33,
+      0.72
+    ],
+    "ensemble": [
+      0.5,
+      0.51,
+      0.39,
+      0.49,
+      0.27,
+      0.33,
+      0.41,
+      0.5,
+      0.51,
+      0.63,
+      0.4,
+      0.5,
+      0.51,
+      0.45,
+      0.53,
+      0.5,
+      0.42,
+      0.63,
+      0.5,
+      0.31,
+      0.24,
+      0.67,
+      0.59,
+      0.2,
+      0.51
+    ],
+    "ensemble_no_override": [
+      0.5,
+      0.51,
+      0.39,
+      0.49,
+      0.27,
+      0.33,
+      0.41,
+      0.5,
+      0.51,
+      0.63,
+      0.4,
+      0.5,
+      0.51,
+      0.45,
+      0.53,
+      0.5,
+      0.42,
+      0.63,
+      0.5,
+      0.31,
+      0.24,
+      0.67,
+      0.59,
+      0.2,
+      0.51
+    ],
+    "stacked": [
+      0.81,
+      0.91,
+      0.9,
+      0.87,
+      0.85,
+      0.6,
+      0.84,
+      0.93,
+      0.84,
+      0.78,
+      0.87,
+      0.84,
+      0.91,
+      0.86,
+      0.81,
+      0.88,
+      0.7,
+      0.73,
+      0.76,
+      0.78,
+      0.68,
+      0.83,
+      0.81,
+      0.8,
+      0.77
+    ]
+  },
+  "confusion": [
+    [
+      25997,
+      443
+    ],
+    [
+      334,
+      2381
+    ]
+  ],
+  "weights_per_fold": [
+    {
+      "heuristic": 0.45,
+      "naive_bayes": 0.55
+    },
+    {
+      "heuristic": 0.4,
+      "naive_bayes": 0.6
+    },
+    {
+      "heuristic": 0.2,
+      "naive_bayes": 0.8
+    },
+    {
+      "heuristic": 0.25,
+      "naive_bayes": 0.75
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.25,
+      "naive_bayes": 0.75
+    },
+    {
+      "heuristic": 0.15,
+      "naive_bayes": 0.85
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.3,
+      "naive_bayes": 0.7
+    },
+    {
+      "heuristic": 0.45,
+      "naive_bayes": 0.55
+    },
+    {
+      "heuristic": 0.45,
+      "naive_bayes": 0.55
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.55,
+      "naive_bayes": 0.45
+    },
+    {
+      "heuristic": 0.15,
+      "naive_bayes": 0.85
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.25,
+      "naive_bayes": 0.75
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.1,
+      "naive_bayes": 0.9
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.15,
+      "naive_bayes": 0.85
+    },
+    {
+      "heuristic": 0.1,
+      "naive_bayes": 0.9
+    },
+    {
+      "heuristic": 0.3,
+      "naive_bayes": 0.7
+    }
+  ],
+  "detector_firing": {
+    "urgency": {
+      "positive_%": 22.099447513812155,
+      "negative_%": 0.49167927382753407
+    },
+    "credential": {
+      "positive_%": 6.261510128913445,
+      "negative_%": 0.49167927382753407
+    },
+    "financial": {
+      "positive_%": 50.82872928176796,
+      "negative_%": 3.309379727685325
+    },
+    "url": {
+      "positive_%": 17.863720073664823,
+      "negative_%": 2.307110438729198
+    },
+    "sentiment": {
+      "positive_%": 2.9465930018416207,
+      "negative_%": 0.037821482602118005
+    },
+    "pattern": {
+      "positive_%": 61.32596685082873,
+      "negative_%": 2.401664145234493
+    }
+  },
+  "stacked_errors_by_label": {
+    "false_positives": {
+      "spam": 448,
+      "ham": 13
+    },
+    "false_negatives": {
+      "smishing": 309
+    },
+    "per_repeat_divisor": 5
+  },
+  "latency": {
+    "median_ms": 0.4387834999306506,
+    "p95_ms": 0.5336596998859022,
+    "n": 500
+  },
+  "final_weights": {
+    "heuristic": 0.35,
+    "naive_bayes": 0.65
+  },
+  "examples": [
+    {
+      "score": 0.6722934769399673,
+      "label": "phishing",
+      "layer_scores": {
+        "heuristic": 0.15,
+        "naive_bayes": 0.9535284260614881
+      },
+      "detectors_fired": [
+        "financial"
+      ],
+      "reasons": [
+        "mentions money, prizes, refunds or bank actions"
+      ],
+      "nb_terms": [
+        "io",
+        "96",
+        "or more"
+      ],
+      "text": "Please Stay At Home. To encourage the notion of staying at home. All tax-paying citizens are entitled to \u00ef\u00bf\u00bd305.96 or more emergency refund. smsg.io/fCVbD"
+    },
+    {
+      "score": 0.0008468609952101835,
+      "label": "legitimate",
+      "layer_scores": {
+        "heuristic": 0.0,
+        "naive_bayes": 0.0013028630695541285
+      },
+      "detectors_fired": [],
+      "reasons": [],
+      "nb_terms": [
+        "reply",
+        "your"
+      ],
+      "text": "Your opinion about me? 1. Over 2. Jada 3. Kusruthi 4. Lovable 5. Silent 6. Spl character 7. Not matured 8. Stylish 9. Simple Pls reply.."
+    }
+  ],
+  "sample_errors": [
+    {
+      "label": "spam",
+      "text": "lyricalladie(21/F) is inviting you to be her friend. Reply YES-910 or NO-910. See her: www.SMS.ac/u/hmmross STOP? Send STOP FRND to 62468"
+    },
+    {
+      "label": "spam",
+      "text": "PL: Battle Royale! Gilchrist Vs Warne today at 8PM. Click http://ipl.onmix.mobi/?src=504 for IPL on mobile. To stop MIX alerts click http://onmix.mobi/alert"
+    },
+    {
+      "label": "smishing",
+      "text": "YOUR CHANCE TO BE ON A REALITY FANTASY SHOW call now = 08707509020 Just 20p per min NTT Ltd"
+    },
+    {
+      "label": "spam",
+      "text": "Do you want a New Nokia 3510i colour phone DeliveredTomorrow? With 300 free minutes to any mobile + 100 free texts  call 08000930705"
+    },
+    {
+      "label": "smishing",
+      "text": "U\u00e2\u0080\u0099ve Bin Awarded \u00c2\u00a350 to Play 4 Instant Cash. Call 08715203028 To Claim. EVERY 9th Player Wins Min \u00c2\u00a350-\u00c2\u00a3500. OptOut 08718727870"
+    },
+    {
+      "label": "smishing",
+      "text": "\tFREE MESSAGE Activate your 500 FREE Text Messages by replying to this message with the word FEE, visit www.07781482378.com"
+    },
+    {
+      "label": "spam",
+      "text": "Free video camera phones with Half Price line rental for 12 mths and 500 cross ntwk mins 100 txts. Call MobileUpd8 08001950382"
+    },
+    {
+      "label": "smishing",
+      "text": "Englishvocabulary ululate: to mourn loudly and shrilly AD: Unlimited FREE calls to any mobile try out today http://bit.ly/unlmtdfreecall share wid frnd"
+    },
+    {
+      "label": "smishing",
+      "text": "500 free text msgs. Just text ok to 80488 a or call 08718738034 nd we'll credit your account"
+    },
+    {
+      "label": "spam",
+      "text": "U are subscribed to the best Mobile Content Service in the UK for \u00c2\u00a33 per 10 days Helpline 08706091795"
+    },
+    {
+      "label": "smishing",
+      "text": "Are you unique enough? Find out from 30th August. www.areyouunique.co.uk"
+    },
+    {
+      "label": "spam",
+      "text": "WIN a year supply of CDs 4 a store of ur choice worth \u00c2\u00a3500 & enter our \u00c2\u00a3100 Weekly draw txt MUSIC to 87066 Ts&Cs www.Ldew.com"
+    },
+    {
+      "label": "smishing",
+      "text": "A link to your picture has been sent. You can also use http://alto18.co.uk/wave/wave.asp?o=44345"
+    },
+    {
+      "label": "smishing",
+      "text": "For taking part in our mobile survey yesterday! You can now have 500 texts 2 use however you wish. 2 get txts just send TXT to 80160 T&C www.txt43.com 1.50p"
+    },
+    {
+      "label": "spam",
+      "text": "Think ur smart ? Win \u00c2\u00a3200 this week in our weekly quiz, text PLAY to 85222 now!T&Cs WinnersClub PO BOX 84, M26 3UZ. 16+. GBP1.50/week"
+    },
+    {
+      "label": "smishing",
+      "text": "Please Stay At Home. To encourage the notion of staying at home. All tax-paying citizens are entitled to \u00ef\u00bf\u00bd305.96 or more emergency refund. smsg.io/fCVbD"
+    },
+    {
+      "label": "smishing",
+      "text": "\tFREE entry into our \u00c2\u00a3250 weekly comp just send the word ENTER to 84128 NOW. 18 T&C www.textcomp.com cust care 08712405020."
+    },
+    {
+      "label": "spam",
+      "text": "We tried to contact you re your reply to our offer of a Video Phone 750 anytime any network mins Half Price Line Rental Camcorder Reply or call 08000930705"
+    },
+    {
+      "label": "smishing",
+      "text": "XXXMobileMovieClub: To use your credit, click the WAP link in the next txt message or click here>> http://wap. xxxmobilemovieclub.com?n=QJKGIGHJJGCBL"
+    },
+    {
+      "label": "smishing",
+      "text": "Prem Jewellrs Vijaynagar Lucky draw scheme , monthly Rs 300 for 12 month, every month lucky member will be given Rs3600 gold or silver article.Call-9008097492"
+    }
+  ],
+  "_generated_at": "2026-11-23 18:44:51",
+  "_machine": {
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+    "logical_cpus": 2,
+    "python": "3.13.18",
+    "os": "Linux"
+  }
+}

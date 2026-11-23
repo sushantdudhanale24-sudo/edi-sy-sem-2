@@ -1,0 +1,41 @@
+IEEE VCC 2027 – EDAS SUBMISSION SHEET (Paper A)
+Deadline: 27 Nov 2026 (check the time zone on the EDAS page). Submit by 26 Nov to keep a buffer.
+
+TITLE
+Explainable Learned Fusion for Robust SMS Phishing Detection: A Statistically Validated Study of Smishing Filters
+
+ABSTRACT (paste into the EDAS abstract box)
+SMS phishing (smishing) reaches users on a personal channel where few filters and no explanations exist, and published detectors are often evaluated on a single split that mixes smishing with ordinary spam. We present the SMS engine of PhishSentry, which combines six interpretable heuristic detectors and a TF-IDF Naive Bayes model through a learned (stacked) fusion layer, and returns each verdict with the evidence behind it. On the public Mishra–Soni dataset (5,831 unique messages, 5×5-fold cross-validation, corrected significance tests), stacked fusion detects malicious SMS with 95.84% F1 at a 0.59% false-positive rate, +1.13 points over Naive Bayes alone (p = 0.015). Fixed-weight voting and a rule override, used in our earlier design, add nothing measurable. Separating smishing from commercial spam is harder (86.21% F1), yet 97.2% of those false alarms are spam and only 0.05% of personal messages are flagged. Leetspeak, homoglyph, split-letter and defanged-link obfuscation lower the stacked detector’s recall by at most 2.2 points, and a normalisation step recovers most of the loss. A verdict takes 0.45 ms on one CPU core.
+
+KEYWORDS
+smishing; SMS phishing; mobile security; ensemble learning; stacking; explainable AI; adversarial obfuscation
+
+TRACK / SYMPOSIUM
+Choose the communication and information security track (the one covering security and privacy).
+If there's no such track, choose the AI/ML for communications track.
+
+AUTHORS (enter in this order; each author needs an EDAS account; the corresponding author submits)
+1. Nilesh Korade – Dept. of CSE (AI), Vishwakarma Institute of Technology, Pune – nilesh.korade.ml@gmail.com
+2. Sushant Dudhanale – same – sushant.dudhanale24@vit.edu
+3. Soham Deogaonkar – same – soham.deogaonkar24@vit.edu
+4. Arjun Deokar – same – arjun.deokar24@vit.edu
+5. Shivanand Dodikindiwad – same – shivananddevareddy.dodikindiwad24@vit.edu
+
+STEPS
+1. Push the code to GitHub. Put its URL in results/_github.json, then run: node papers/paper_a_vcc.js
+2. Open PaperA_VCC2027_PhishSentry.docx in Word on Windows; the fonts become Times New Roman.
+   Check that it's 6 pages or fewer, then File > Save As > PDF.
+3. Turnitin check at the VIT library (aim for under 10% similarity). Guide review. All 5 authors approve.
+4. If the conference gives a PDF eXpress conference ID, run the PDF through IEEE PDF eXpress.
+   Otherwise EDAS runs its own PDF check on upload.
+5. EDAS: log in > "Submit paper" > IEEE VCC 2027 > choose the track > enter title, abstract, keywords and authors >
+   upload the PDF > confirm. Save the confirmation email and the paper ID.
+6. Do NOT submit this paper anywhere else while it's under review. Paper B (ICMDRSE) covers a different part of the system.
+
+WHAT THE PAPER CLAIMS (all from results/e1_sms_*.json and results/e1b_sms_robustness.json)
+- T1, malicious vs ham: stacked fusion gets 95.84% F1 at 0.59% FPR; +1.13 F1 over Naive Bayes (p = 0.015)
+- T2, smishing vs rest: about 86.2% F1; 97.2% of false alarms are spam; 0.05% of ham is flagged
+- Fixed-weight voting and the rule override: no significant gain
+- Obfuscation: recall drops at most 2.2 points; normalisation recovers it to 93.7%
+- Latency: 0.45 ms per message
+If anyone changes the code, re-run the experiments and rebuild. Never edit numbers by hand.

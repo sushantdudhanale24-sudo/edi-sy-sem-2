@@ -1,0 +1,604 @@
+{
+  "dataset": "sms_mishra_soni_5971.csv",
+  "n_raw": 5971,
+  "n": 5831,
+  "n_positive": 997,
+  "n_negative": 4834,
+  "positive_labels": [
+    "smishing",
+    "spam"
+  ],
+  "label_counts": {
+    "ham": 4834,
+    "smishing": 543,
+    "spam": 454
+  },
+  "folds": 5,
+  "repeats": 5,
+  "significance": {
+    "stacked_vs_heuristic": {
+      "mean_diff_pts": 12.693493980554255,
+      "t": 17.423501863377787,
+      "p": 3.9927682387076714e-15
+    },
+    "stacked_vs_naive_bayes": {
+      "mean_diff_pts": 1.1313596426061707,
+      "t": 2.60826793763283,
+      "p": 0.015413460714859271
+    },
+    "stacked_vs_ensemble": {
+      "mean_diff_pts": 1.0943747339942096,
+      "t": 2.68405572261958,
+      "p": 0.012971814389849795
+    },
+    "ensemble_vs_naive_bayes": {
+      "mean_diff_pts": 0.03698490861196113,
+      "t": 0.3425228161568047,
+      "p": 0.7349391840783104
+    },
+    "override_effect": {
+      "mean_diff_pts": 0.0,
+      "t": 0.0,
+      "p": 1.0
+    }
+  },
+  "layers": [
+    "heuristic",
+    "naive_bayes"
+  ],
+  "theta": 0.6,
+  "transformer": null,
+  "summary": {
+    "heuristic": {
+      "precision": {
+        "mean": 88.1379978434611,
+        "std": 1.9653184190640625
+      },
+      "recall": {
+        "mean": 78.7356783919598,
+        "std": 2.2785262842968503
+      },
+      "f1": {
+        "mean": 83.14780266672965,
+        "std": 1.6311861859903365
+      },
+      "accuracy": {
+        "mean": 94.54633349060278,
+        "std": 0.5052972742127195
+      },
+      "fpr": {
+        "mean": 2.1927585475987077,
+        "std": 0.4051527101388563
+      },
+      "auc": {
+        "mean": 88.61906804480651,
+        "std": 1.1636358650461167
+      }
+    },
+    "naive_bayes": {
+      "precision": {
+        "mean": 96.68750928807616,
+        "std": 1.9734535776202156
+      },
+      "recall": {
+        "mean": 92.87849246231156,
+        "std": 2.1225958009043597
+      },
+      "f1": {
+        "mean": 94.70993700467773,
+        "std": 1.0127515322371925
+      },
+      "accuracy": {
+        "mean": 98.22669435784825,
+        "std": 0.34028500864445
+      },
+      "fpr": {
+        "mean": 0.6702978840023037,
+        "std": 0.43627756544378293
+      },
+      "auc": {
+        "mean": 99.24566501546683,
+        "std": 0.2785602354014546
+      }
+    },
+    "ensemble": {
+      "precision": {
+        "mean": 96.7395956863931,
+        "std": 1.8019201342112285
+      },
+      "recall": {
+        "mean": 92.89869346733668,
+        "std": 2.1989710571673835
+      },
+      "f1": {
+        "mean": 94.7469219132897,
+        "std": 1.0076031924809912
+      },
+      "accuracy": {
+        "mean": 98.2404194243938,
+        "std": 0.33094480063408344
+      },
+      "fpr": {
+        "mean": 0.6578755237538566,
+        "std": 0.3925721071614619
+      },
+      "auc": {
+        "mean": 99.28157128228085,
+        "std": 0.2754402655071788
+      }
+    },
+    "ensemble_no_override": {
+      "precision": {
+        "mean": 96.7395956863931,
+        "std": 1.8019201342112285
+      },
+      "recall": {
+        "mean": 92.89869346733668,
+        "std": 2.1989710571673835
+      },
+      "f1": {
+        "mean": 94.7469219132897,
+        "std": 1.0076031924809912
+      },
+      "accuracy": {
+        "mean": 98.2404194243938,
+        "std": 0.33094480063408344
+      },
+      "fpr": {
+        "mean": 0.6578755237538566,
+        "std": 0.3925721071614619
+      },
+      "auc": {
+        "mean": 99.28157128228085,
+        "std": 0.2754402655071788
+      }
+    },
+    "stacked": {
+      "precision": {
+        "mean": 97.09342375523211,
+        "std": 1.415583338519214
+      },
+      "recall": {
+        "mean": 94.66371859296483,
+        "std": 1.9338998231675102
+      },
+      "f1": {
+        "mean": 95.84129664728391,
+        "std": 0.917002721314462
+      },
+      "accuracy": {
+        "mean": 98.59711829455244,
+        "std": 0.30193654579424856
+      },
+      "fpr": {
+        "mean": 0.5917000134886021,
+        "std": 0.3021055403768713
+      },
+      "auc": {
+        "mean": 99.34623058619557,
+        "std": 0.2720892098569247
+      }
+    }
+  },
+  "thresholds_per_fold": {
+    "heuristic": [
+      0.11,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.11,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "naive_bayes": [
+      0.31,
+      0.57,
+      0.31,
+      0.27,
+      0.18,
+      0.18,
+      0.26,
+      0.32,
+      0.46,
+      0.48,
+      0.31,
+      0.21,
+      0.33,
+      0.3,
+      0.38,
+      0.38,
+      0.47,
+      0.29,
+      0.43,
+      0.33,
+      0.56,
+      0.35,
+      0.33,
+      0.19,
+      0.44
+    ],
+    "ensemble": [
+      0.31,
+      0.49,
+      0.31,
+      0.27,
+      0.18,
+      0.19,
+      0.24,
+      0.32,
+      0.46,
+      0.48,
+      0.31,
+      0.2,
+      0.33,
+      0.3,
+      0.38,
+      0.3,
+      0.47,
+      0.29,
+      0.34,
+      0.33,
+      0.5,
+      0.35,
+      0.28,
+      0.18,
+      0.44
+    ],
+    "ensemble_no_override": [
+      0.31,
+      0.49,
+      0.31,
+      0.27,
+      0.18,
+      0.19,
+      0.24,
+      0.32,
+      0.46,
+      0.48,
+      0.31,
+      0.2,
+      0.33,
+      0.3,
+      0.38,
+      0.3,
+      0.47,
+      0.29,
+      0.34,
+      0.33,
+      0.5,
+      0.35,
+      0.28,
+      0.18,
+      0.44
+    ],
+    "stacked": [
+      0.58,
+      0.62,
+      0.44,
+      0.51,
+      0.46,
+      0.62,
+      0.63,
+      0.44,
+      0.55,
+      0.61,
+      0.46,
+      0.51,
+      0.34,
+      0.37,
+      0.46,
+      0.32,
+      0.5,
+      0.48,
+      0.46,
+      0.52,
+      0.66,
+      0.44,
+      0.67,
+      0.49,
+      0.47
+    ]
+  },
+  "confusion": [
+    [
+      24011,
+      159
+    ],
+    [
+      354,
+      4631
+    ]
+  ],
+  "weights_per_fold": [
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.15,
+      "naive_bayes": 0.85
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.1,
+      "naive_bayes": 0.9
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.2,
+      "naive_bayes": 0.8
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.2,
+      "naive_bayes": 0.8
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.15,
+      "naive_bayes": 0.85
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    },
+    {
+      "heuristic": 0.2,
+      "naive_bayes": 0.8
+    },
+    {
+      "heuristic": 0.05,
+      "naive_bayes": 0.95
+    },
+    {
+      "heuristic": 0.0,
+      "naive_bayes": 1.0
+    }
+  ],
+  "detector_firing": {
+    "urgency": {
+      "positive_%": 12.337011033099298,
+      "negative_%": 0.4757964418700869
+    },
+    "credential": {
+      "positive_%": 4.413239719157472,
+      "negative_%": 0.33098882912701694
+    },
+    "financial": {
+      "positive_%": 39.61885656970912,
+      "negative_%": 1.1584609019445593
+    },
+    "url": {
+      "positive_%": 20.561685055165498,
+      "negative_%": 0.2896152254861398
+    },
+    "sentiment": {
+      "positive_%": 1.60481444332999,
+      "negative_%": 0.04137360364087712
+    },
+    "pattern": {
+      "positive_%": 46.038114343029086,
+      "negative_%": 0.02068680182043856
+    }
+  },
+  "stacked_errors_by_label": {
+    "false_positives": {
+      "ham": 143
+    },
+    "false_negatives": {
+      "smishing": 30,
+      "spam": 236
+    },
+    "per_repeat_divisor": 5
+  },
+  "latency": {
+    "median_ms": 0.4514539999718181,
+    "p95_ms": 0.5297273998735362,
+    "n": 500
+  },
+  "final_weights": {
+    "heuristic": 0.0,
+    "naive_bayes": 1.0
+  },
+  "examples": [
+    {
+      "score": 0.9782207840137902,
+      "label": "phishing",
+      "layer_scores": {
+        "heuristic": 0.15,
+        "naive_bayes": 0.9782207840137902
+      },
+      "detectors_fired": [
+        "financial"
+      ],
+      "reasons": [
+        "mentions money, prizes, refunds or bank actions"
+      ],
+      "nb_terms": [
+        "tax",
+        "entitled",
+        "entitled to"
+      ],
+      "text": "Please Stay At Home. To encourage the notion of staying at home. All tax-paying citizens are entitled to \u00ef\u00bf\u00bd305.96 or more emergency refund. smsg.io/fCVbD"
+    },
+    {
+      "score": 0.0005296061996165258,
+      "label": "legitimate",
+      "layer_scores": {
+        "heuristic": 0.0,
+        "naive_bayes": 0.0005296061996165258
+      },
+      "detectors_fired": [],
+      "reasons": [],
+      "nb_terms": [
+        "reply",
+        "your",
+        "pls reply"
+      ],
+      "text": "Your opinion about me? 1. Over 2. Jada 3. Kusruthi 4. Lovable 5. Silent 6. Spl character 7. Not matured 8. Stylish 9. Simple Pls reply.."
+    }
+  ],
+  "sample_errors": [
+    {
+      "label": "smishing",
+      "text": "Sorry I missed your call let's talk when you have the time. I'm on 07090201529"
+    },
+    {
+      "label": "spam",
+      "text": "Swayamvara By David Hair,\u00ef\u00bf\u00bdSwayamvara\u00ef\u00bf\u00bd (The Return of Ravana Book 2) by David Hair is a story of reincarnation, two swayamvaras, 800 years apart, that sees f"
+    },
+    {
+      "label": "ham",
+      "text": "Mostly sports type..lyk footbl,crckt.."
+    },
+    {
+      "label": "ham",
+      "text": "See the forwarding message for proof"
+    },
+    {
+      "label": "spam",
+      "text": "Email AlertFrom: Jeri StewartSize: 2KBSubject: Low-cost prescripiton drvgsTo listen to email call 123"
+    },
+    {
+      "label": "spam",
+      "text": "Can U get 2 phone NOW? I wanna chat 2 set up meet Call me NOW on 09096102316 U can cum here 2moro Luv JANE xx Calls\u00c2\u00a31/minmoremobsEMSPOBox45PO139WA"
+    },
+    {
+      "label": "ham",
+      "text": "Did u download the fring app?"
+    },
+    {
+      "label": "spam",
+      "text": "NO EMI TILL POSSESSION. Today group on Noida Exprsway offer once upon life time offer 2BR-930sft-Rs15, 046pm Sample appt ready 5min from Amity 9999975317"
+    },
+    {
+      "label": "ham",
+      "text": "Playin space poker, u?"
+    },
+    {
+      "label": "spam",
+      "text": "dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?"
+    },
+    {
+      "label": "smishing",
+      "text": "Majestic mountains to calm beaches. Adventure holidays to quiet getaways. Manali to Ooty. Puri to Munnar. Holiday for 25 years.EMIs frm Rs.2366. T&C. 9895930777"
+    },
+    {
+      "label": "spam",
+      "text": "Refer to Pg 2 of todays Hindustan Times UNIVERSAL GROUP launches shops in MARKET SQUARE at Golf Course Extn Road, Gurgaon Vishal Batra Investments 9810193057"
+    },
+    {
+      "label": "spam",
+      "text": "CALL 09090900040 & LISTEN TO EXTREME DIRTY LIVE CHAT GOING ON IN THE OFFICE RIGHT NOW TOTAL PRIVACY NO ONE KNOWS YOUR [sic] LISTENING 60P MIN 24/7MP 08707533310"
+    },
+    {
+      "label": "ham",
+      "text": "Nokia phone is lovly.."
+    },
+    {
+      "label": "spam",
+      "text": "Hi ya babe x u 4goten bout me?' scammers getting smart..Though this is a regular vodafone no, if you respond you get further prem rate msg/subscription. Other n"
+    },
+    {
+      "label": "spam",
+      "text": "RCT' THNQ Adrian for U text. Rgds Vatian"
+    },
+    {
+      "label": "spam",
+      "text": "Rediscover the deeper meaning of life and the means to attain true peace. Understand the essence of being a true Sikh. Sms JOIN GURUBANI to 09219592195"
+    },
+    {
+      "label": "spam",
+      "text": "price revising soon for urbtech xaviers fully loaded tallest tower in noida few units left for more details call 9891205199"
+    },
+    {
+      "label": "ham",
+      "text": "K:)eng rocking in ashes:)"
+    },
+    {
+      "label": "smishing",
+      "text": "Local Covid19 Study: Compensation up to $1,220! Qualify Here:1200cash4study1.com/"
+    }
+  ],
+  "_generated_at": "2026-11-23 18:45:12",
+  "_machine": {
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+    "logical_cpus": 2,
+    "python": "3.13.18",
+    "os": "Linux"
+  }
+}
